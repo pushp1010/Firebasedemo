@@ -19,10 +19,10 @@ class IssueDetailViewController: UITableViewController {
         issueDetailViewModel?.fetchComments(completion: { (message) in
             DispatchQueue.main.async {
                 if(message == nil){
-                    self.issueDetailViewModel?.count == 0 ? UIAlertController.showAlert(title: "Firsbase Issue", message: "Comments not available"): self.tableView.reloadData()
+                    self.issueDetailViewModel?.count == 0 ? UIAlertController.showAlert(title: "Firebase-Issue", message: "Comments not available"): self.tableView.reloadData()
                 }
                 else{
-                    UIAlertController.showAlert(title: "Firsbase Issue", message: message!)
+                    UIAlertController.showAlert(title: "Firebase-Issue", message: message!)
                 }
             }
         })
